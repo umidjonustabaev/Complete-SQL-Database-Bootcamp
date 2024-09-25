@@ -48,7 +48,6 @@
 
 **Database User** A person who uses the database.
 
-
 ## Datatypes
 
 A Data type is a classification that defines the type, range of values, allowable operations on the values, and the meaning of the data values.
@@ -61,7 +60,7 @@ For a reference to the data types allowable in postgres, see the [Postgres docum
 
 The SELECT statement is used to query the database. It is the most common command in SQL.
 
-```sql 
+```sql
 SELECT column1, column2, ...
 FROM table_name;
 ```
@@ -173,6 +172,7 @@ FROM table_name AS alias3;
 ## Querying Multiple Tables
 
 ### JOIN
+
 ![Join](../images/joins.png)
 
 The JOIN clause is used to combine rows from two or more tables, based on a related column between them.
@@ -186,19 +186,19 @@ ON table1.column_name = table2.column_name;
 
 ### LEFT JOIN
 
-The LEFT JOIN clause returns all records from the left table (table1), and the matched records from the right table (table2). 
+The LEFT JOIN clause returns all records from the left table (table1), and the matched records from the right table (table2).
 The result is NULL from the right side, if there is no match.
 
 ```sql
 SELECT column_name(s)
-FROM table1 
+FROM table1
 LEFT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
 
 ### RIGHT JOIN
 
-The RIGHT JOIN clause returns all records from the right table (table2), and the matched records from the left table (table1). 
+The RIGHT JOIN clause returns all records from the right table (table2), and the matched records from the left table (table1).
 The result is NULL from the left side, when there is no match.
 
 ```sql
@@ -253,7 +253,7 @@ SELECT column_name(s) FROM table2;
 
 The INNER JOIN keyword selects records that have matching values in both tables.
 
-```sql 
+```sql
 SELECT column_name(s)
 FROM table1
 INNER JOIN table2 ON table1.column_name = table2.column_name;
@@ -535,7 +535,7 @@ Single line comments start with two dashes (--) and end at the end of the line.
 
 ### Multi Line Comments
 
-Multi line comments start with a slash and an asterisk (/*) and end with an asterisk and a slash (*/).
+Multi line comments start with a slash and an asterisk (/_) and end with an asterisk and a slash (_/).
 
 ```sql
 /*
@@ -559,10 +559,7 @@ WHERE column_name LIKE pattern;
 
 ### Wildcard Characters
 
-| Character | Description |
-| :--- | :--- |
-| % | The percent sign represents zero, one, or multiple characters |
-| _ | The underscore represents a single character |
-
-
-
+| Character | Description                                                   |
+| :-------- | :------------------------------------------------------------ |
+| %         | The percent sign represents zero, one, or multiple characters |
+| \_        | The underscore represents a single character                  |
